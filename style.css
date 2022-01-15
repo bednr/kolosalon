@@ -1,0 +1,20 @@
+body{
+    background-image: url(pics/bikes.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    }
+.container{
+    background-color: rgba(245, 245, 245, 0.897);
+}
+.card{
+    background-color: rgba(245, 245, 245, 0);
+    border: none;
+}
+
+*{
+    font-family: 'Courier New', Courier, monospace ;
+    font-weight: bold;
+}
+input[type='number']{
+    width: 120px;
+} 

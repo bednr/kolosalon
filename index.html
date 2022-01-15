@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bednarek</title>
+</head>
+
+<body>
+
+    <div class="container justify-content-center align-items-center mt-5 p-5">
+        <!-- <h1 class="text-center">Kolosalon</h1> -->
+        <form action="" name="form1" onchange="cenaKol();">
+            <fieldset>
+                <legend class="my-3">Kolosalon</legend>
+                <div class="row">
+                    <div class="card col-lg-3 col-md-6 col-12 p-3 " style="width: 18rem;">
+                        <img class="card-img-top" src="pics/horske1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <label for="horske">Horské (700,-/den)</label><br>
+                            <input type="checkbox" id="horske" value="700">
+                            <input type="number" min="0" value="1" id="horskeNum">
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-12 p-3 " style="width: 18rem;">
+                        <img class="card-img-top" src="pics/detske1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <label for="detske">Dětské (500,-/den)</label><br>
+                                                        <input type="checkbox" id="detske" value="500">
+
+                            <input type="number" min="0" value="1" id="detskeNum">
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-12 p-3 " style="width: 18rem;">
+                        <img class="card-img-top" src="pics/silnicni1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <label for="silnicni">Silniční (600,-/den)</label><br>
+                              <input type="checkbox" id="silnicni" value="600">
+                          
+                            <input type="number" min="0" value="1" id="silnicniNum">
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                    <div class="card col-lg-3 col-md-6 col-12 p-3 " style="width: 18rem;">
+                        <img class="card-img-top" src="pics/gravel.png" alt="Card image cap">
+                        <div class="card-body">
+                            <label for="gravel">Gravel (1000,-/den)</label><br>
+                                                        <input type="checkbox" id="gravel" value="1000">
+
+                            <input type="number" min="0" value="1" id="gravelNum">
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-4 my-3">
+                        <p>Doba půjčení</p>
+                        <select id="delkaPujc" size="1">
+                            <option value="1">Den</option>
+                            <option value="7">Týden</option>
+                            <option value="14">Dva týdny</option>
+                            <option value="30">Měsíc</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="col-lg-8 my-3">
+
+                        <p>Navíc k půjčení</p>
+
+                        <input type="radio" name="radio1" value="0.05" id="opt1">
+                        <label for="opt1">cyklonosič střešní (+ 5% z celkové ceny zápůjčky navíc)</label><br>
+                        <input type="radio" name="radio1" value="0.1" id="opt2">
+                        <label for="opt2">cyklonosič na tažné zařízení (+ 10% z celkové ceny zápůjčky navíc)</label><br>
+                        <input type="radio" name="radio1" value="0" id="opt3" checked>
+                        <label for="opt3">bez cyklonosiče</label><br>
+                    </div>
+                </div>
+                <hr>
+                <p class="suma"></p>
+                <!-- <input type="text" name="celkem" id="suma" readonly> -->
+                <br>
+                <label for="kolikDa">Kolik jste ochoten zaplatit?</label>
+                <input type="text" name="kolikDa" id="overNabidku">
+                <input type="button" id="kolikDa" value="Ověřit" onclick="overit();">
+                <br>
+                <p id="isOK"></p>
+                <!-- <input type="text" id="isOK" readonly placeholder="Pole ověří nabídku"> -->
+                <hr>
+                <label for="mail">Váš E-mail: </label>
+                <input type="email" id="Email">
+                <input type="button" value="Odeslat" name="mail" onclick="checkMail();">
+            </fieldset>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
